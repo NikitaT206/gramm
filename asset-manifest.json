@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/gramm/static/css/main.2284ea24.css",
+    "main.js": "/gramm/static/js/main.622c0a5e.js",
+    "static/media/4.png": "/gramm/static/media/4.c676247f3dd25bf0010a.png",
+    "static/media/8.png": "/gramm/static/media/8.3e83a58c4957ac8a0b7d.png",
+    "static/media/2.png": "/gramm/static/media/2.640360820e3ff20be745.png",
+    "static/media/13.png": "/gramm/static/media/13.9c7358fbba7186563cca.png",
+    "static/media/6.png": "/gramm/static/media/6.f092c051e27917b8b365.png",
+    "static/media/1.png": "/gramm/static/media/1.66642cbf5f66050145a3.png",
+    "static/media/17.png": "/gramm/static/media/17.e0c760e84e9aa387c869.png",
+    "static/media/7.png": "/gramm/static/media/7.deebd68e11d9ad742b39.png",
+    "static/media/12.png": "/gramm/static/media/12.14bd1b908351ee91e3df.png",
+    "static/media/10.png": "/gramm/static/media/10.4aa71aa11ce1a14f7889.png",
+    "static/media/11.png": "/gramm/static/media/11.a59b29923cf5b538535f.png",
+    "static/media/5.png": "/gramm/static/media/5.6aad049bb460f5f1dd19.png",
+    "static/media/19.png": "/gramm/static/media/19.c94aba6d010afdc9bc5d.png",
+    "static/media/16.png": "/gramm/static/media/16.86cf7fb506ed07b7dab9.png",
+    "static/media/20.png": "/gramm/static/media/20.88cefdd89943feaa50de.png",
+    "static/media/14.png": "/gramm/static/media/14.5ba81225bf85c801fa29.png",
+    "static/media/3.png": "/gramm/static/media/3.c6c6f16335eb0155f3d9.png",
+    "static/media/18.png": "/gramm/static/media/18.d29278da78c7dae04cef.png",
+    "static/media/15.png": "/gramm/static/media/15.2f105a68abc5914f4ae0.png",
+    "static/media/me.jpg": "/gramm/static/media/me.cc63c7799a19448c42b0.jpg",
+    "static/media/video.png": "/gramm/static/media/video.52535072f84ae498ac6f.png",
+    "static/media/heart.png": "/gramm/static/media/heart.05f7231e3025e5fa9429.png",
+    "static/media/inSearch.png": "/gramm/static/media/inSearch.a27091ef0c45faf8a66e.png",
+    "static/media/like.png": "/gramm/static/media/like.49a33fdaac365c00bfa5.png",
+    "static/media/plus.png": "/gramm/static/media/plus.f21a9921a345ef558fd8.png",
+    "index.html": "/gramm/index.html",
+    "main.2284ea24.css.map": "/gramm/static/css/main.2284ea24.css.map",
+    "main.622c0a5e.js.map": "/gramm/static/js/main.622c0a5e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2284ea24.css",
+    "static/js/main.622c0a5e.js"
+  ]
+}

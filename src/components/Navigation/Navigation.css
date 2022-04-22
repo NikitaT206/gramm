@@ -1,0 +1,85 @@
+.navigation {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px 0 30px 0;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  border-top: 1px solid rgb(187, 187, 187);
+  z-index: 2;
+}
+
+.navigation__container {
+  display: flex;
+  width: 100%;
+  max-width: 87%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navigation__button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-size: cover;
+  display: flex;
+  transition: .1s ease-in-out;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navigation__button_type_home {
+  background-image: url(../../images/buttons/home.png);
+}
+
+.navigation__button_type_home_active {
+  background-image: url(../../images/buttons/inHome.png);
+}
+
+.navigation__button_type_search {
+  background-image: url(../../images/buttons/search.png);
+}
+
+.navigation__button_type_search_active {
+  background-image: url(../../images/buttons/inSearch.png);
+}
+
+.navigation__button_type_video {
+  background-image: url(../../images/buttons/video.png);
+}
+
+.navigation__button_type_video_active {
+  background-image: url(../../images/buttons/video.png);
+  transform: scale(1.1);
+}
+
+.navigation__button_type_heart {
+  background-image: url(../../images/buttons/heart.png);
+}
+
+.navigation__button_type_heart_active {
+  background-image: url(../../images/buttons/like.png);
+}
+
+.navigation__button_type_profile {
+  box-sizing: border-box;
+  border-radius: 50%;
+  outline: 1px solid grey;
+  background-image: url(../../images/me.jpg);
+  transition: none;
+}
+
+.navigation__button_type_profile_active {
+  transition: none;
+  box-sizing: border-box;
+  border-radius: 50%;
+  outline: 1.5px solid rgb(36, 36, 36);
+  background-image: url(../../images/me.jpg);
+}

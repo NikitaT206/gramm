@@ -1,0 +1,70 @@
+.social-icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.social-icons__likes-coment-share-buttons {
+  display: flex;
+  max-width: 200px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.social-icons__button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-size: cover;
+  display: flex;
+  transition: .3s ease-in-out;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.social-icons__circles-of-items {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+  left: 50%;
+  top: 50%;
+}
+
+.social-icons__circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.social-icons__circle_active {
+  transform: scale(1.2);
+  background-color: rgb(67, 67, 255);
+}
+
+.social-icons__button_type_like {
+  background-image: url(../../images/buttons/heart.png);
+ 
+}
+
+.social-icons__button_type_like_active {
+  background-image: url(../../images/buttons/like.png);
+}
+
+.social-icons__button_type_comment {
+  background-image: url(../../images/buttons/comment.png);
+}
+
+.social-icons__button_type_share {
+  background-image: url(../../images/buttons/send.png);
+}
+
+.foto-item__button_type_save {
+  background-image: url(../../images/buttons/save.png);
+}

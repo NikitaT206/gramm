@@ -1,0 +1,28 @@
+.info {
+  width: 100%;
+  max-width: 93%;
+  margin: 0 auto;
+}
+
+.info__likes {
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.info__owner {
+  font-weight: 600;
+}
+
+.info__date {
+  margin: 0;
+  font-size: 11px;
+}
+
+.info__show-all-comments-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  color: grey;
+}

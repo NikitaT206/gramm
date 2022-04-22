@@ -1,0 +1,21 @@
+.user-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: 130px;
+  grid-auto-rows: 130px;
+  padding: 20px 0 75px 0;
+  gap: 3px;
+}
+
+.user-gallery__item {
+  display: flex;
+  width: 100%;
+}
+
+.user-gallery__image {
+  font-size: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

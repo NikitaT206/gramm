@@ -1,0 +1,11 @@
+.search-item {
+  width: 100%;
+  display: flex;
+}
+
+.search-item__image {
+  font-size: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

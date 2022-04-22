@@ -1,0 +1,28 @@
+.add-coment-form {
+  display: flex;
+  padding: 10px 0 5px 0;
+  gap: 10px;
+}
+
+.add-coment-form__user-avatar-container {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.add-coment-form__input {
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  padding: 5px 0;
+  flex: 1 1 auto;
+}
+
+.add-coment-form__user-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

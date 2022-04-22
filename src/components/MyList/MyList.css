@@ -1,0 +1,7 @@
+.my-list {
+  padding: 80px 0;
+}
+
+.my-list::-webkit-scrollbar {
+  width: 0px;
+}

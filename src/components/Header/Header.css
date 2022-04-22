@@ -1,0 +1,58 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 0 10px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  z-index: 2;
+}
+
+.header__container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header__user-login-container {
+  display: flex;
+}
+
+.header__user-login {
+  margin: 0;
+  align-self: flex-start;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.header__buttons-container {
+  display: flex;
+  gap: 25px;
+  align-items: baseline;
+}
+
+.header__button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__button_type_add-foto {
+  background-image: url(../../images/buttons/plus.png);
+}
+
+.header__button_type_open-messages {
+  background-image: url(../../images/buttons/send.png);
+
+}

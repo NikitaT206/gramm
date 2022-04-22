@@ -1,0 +1,21 @@
+.info__description {
+  margin: 0;
+}
+
+.foto-description__owner {
+  font-weight: 600;
+}
+
+.foto-description__else-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: grey;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.foto-description__text {
+  margin: 0;
+}

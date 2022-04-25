@@ -1,8 +1,12 @@
+import { useEffect, useState } from 'react'
 import './FotoItem.css'
 import { HeadingBlock } from './HeadingBlock'
 import { InfoBlock } from './InfoBlock'
+import { api } from '../../constants/fotos'
 
 export function FotoItem({item}: any) {
+ 
+
   return (
     <div className='foto-item'>
       <HeadingBlock/>

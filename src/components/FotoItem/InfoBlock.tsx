@@ -2,8 +2,22 @@ import { AddCommentForm } from './AddCommentForm'
 import { FotoDescription } from './FotoDescription'
 import './InfoBlock.css'
 import { SocialIconsBlock } from './SocialIconsBlock'
+import { api } from '../../constants/fotos'
+import { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export function InfoBlock() {
+
+  const [comments, setComments] = useState([])
+
+  async function getComments() {
+    return await api.getComments().then(data => setComments(data.map((item: any) => item.body)))
+  }
+
+  useEffect(() => {
+    getComments()
+  }, [])
+
   return (
     <div className='info'>
 
@@ -11,7 +25,7 @@ export function InfoBlock() {
 
     <p className='info__likes'>Нравится: {2}</p>
     <FotoDescription/>
-    <button className='info__show-all-comments-button'>Смотреть все комментарии (666)</button>
+    <NavLink className='info__show-all-comments-button' to={'/comments'}>Смотреть все комментарии ({comments.length})</NavLink>
     <AddCommentForm/>
 
     <p className='info__date'>1 день назад</p>

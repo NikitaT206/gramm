@@ -19,13 +19,21 @@ import foto19 from '../images/fotos/19.png'
 import foto20 from '../images/fotos/20.png'
 import { user, user2, user3, user4 } from './users'
 
+class Api {
+  async getComments() {
+    const data = await fetch('https://jsonplaceholder.typicode.com/comments')
+    const response = await data.json()
+    return response
+  }
+}
+
+export const api = new Api()
 
 export const fotoObj1: any = {
   image: foto1,
-  likes: [],
+  likes: [...new Array(Math.floor(Math.random() * 100))],
   description: 'description',
   date: new Date(),
-  // owner: user
 }
 
 export const fotoObj2: any = {

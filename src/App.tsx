@@ -15,6 +15,7 @@ import {
 import { Search } from './components/Search/Search';
 import { Video } from './components/Video/Video';
 import { Liked } from './components/Liked/Liked';
+import { FotoDescriptionWithComments } from './components/FotoDescriptionWithComments/FotoDescriptionWithComments';
 
 function App() {
  
@@ -28,7 +29,7 @@ function App() {
           <Route path='/search' element={<Search/>}/>
           <Route path='/video' element={<Video/>}/>
           <Route path='/liked' element={<Liked/>}/>
-
+          <Route path='/comments' element={<FotoDescriptionWithComments/>}/>
         </Routes>
         <Navigation/>
       </div>

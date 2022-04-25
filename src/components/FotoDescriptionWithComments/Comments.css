@@ -1,0 +1,99 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0 0 0;
+  width: 100%;
+  max-width: 93%;
+  margin: 0 auto;
+}
+
+.comment {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.comment__avatar-container {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
+
+.comment__avatar {
+  width: 100%;
+}
+
+.comment__text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__text {
+  margin: 0;
+  flex-basis: 60%;
+  padding-bottom: 5px;
+}
+
+.comment__user-name {
+  font-weight: 600;
+}
+
+.comment__social-block {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  color: grey;
+  font-size: 13px;
+}
+
+.comment__answer-button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: grey;
+  font-size: 13px;
+  padding: 0;
+}
+
+.comment__show-answers-button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: grey;
+  font-size: 13px;
+  padding: 0;
+  width: max-content;
+  position: relative;
+  padding-left: 40px;
+}
+
+.comment__show-answers-button::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background-color: grey;
+  top: 40%;
+  left: 0;
+  position: absolute;
+}
+
+.comment__like-button {
+  position: relative;
+  right: 0;
+  top: 15px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 10px;
+  max-height: 10px;
+  background-image: url(../../images/buttons/heart.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

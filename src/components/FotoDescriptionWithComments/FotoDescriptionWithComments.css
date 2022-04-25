@@ -1,0 +1,47 @@
+.foto-description-with-comments {
+  padding: 80px 0 80px 0;
+}
+
+.description-block {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.description-block__conatiner {
+  width: 100%;
+  max-width: 93%;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+}
+
+.description-block__avatar-container {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
+
+.avatar {
+  width: 100%;
+}
+
+.description {
+  margin: 0;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.description-section {
+  border-bottom: 1px solid rgba(199, 199, 199, 0.696);
+}
+
+.date {
+  color: grey;
+  font-size: 12px;
+}

@@ -1,4 +1,5 @@
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { Avatar } from '../Avatar/Avatar'
 import './AddCommentForm.css'
 
 export function AddCommentForm() {
@@ -6,9 +7,7 @@ export function AddCommentForm() {
 
   return (
     <form className='add-coment-form'>
-      <div className='add-coment-form__user-avatar-container'>
-        <img className='add-coment-form__user-avatar-image' src={user.avatar}/>
-      </div>
+    <Avatar publication={true}/>
     <input className='add-coment-form__input' type={'text'} placeholder='Добавьте комментарий...'></input>
   </form>
   )

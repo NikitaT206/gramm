@@ -1,9 +1,23 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { SearchInput } from '../Search/SearchInput'
 import './Header.css'
 
 export function Header() {
   const user = useTypedSelector(state => state.user)
+  const location = useLocation()
 
+  if (location.pathname === '/search') {
+    return (
+      <header className='header'>
+      <div className='header__container'>
+        <SearchInput/>
+      </div>
+    </header>
+    )
+  }
+  
   return (
     <header className='header'>
       <div className='header__container'>

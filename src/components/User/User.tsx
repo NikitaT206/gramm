@@ -4,9 +4,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Avatar } from '../Avatar/Avatar'
 import { UserSocialBlock } from './UserSocialBlock'
 import { UserTextContent } from './UserTextContent'
-import { NavLink } from 'react-router-dom'
 import { EditProfile } from '../EditProfile/EditProfile'
-import { useEffect, useState } from 'react'
 import { useActions } from '../../hooks/useActions'
 
 export function User() {
@@ -16,7 +14,6 @@ export function User() {
 
   return (
     <div className='user'>
-      {/* {editProfile ? <EditProfile/> : '' } */}
       <EditProfile/>
 
       <div className='user__info'>

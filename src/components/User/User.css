@@ -1,8 +1,7 @@
 .user {
-  width: 100%;
-  max-width: 100%;
   min-height: 100vh;
-  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .user__info {
@@ -13,32 +12,6 @@
   flex-direction: column;
   gap: 10px;
   border-bottom: 2px solid rgb(188, 188, 188);
-}
-
-.user__avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.user__text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.user__name {
-  font-size: 14px;
-  font-weight: bolder;
-  margin: 0;
-}
-
-.user__description {
-  font-size: 12px;
-  margin: 0;
-  color: rgb(160, 160, 160);
 }
 
 .user__content-info {
@@ -54,35 +27,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
-.user__content-block {
-  max-width: 70px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  gap: 5px;
-}
-
-.user__block-name {
-  align-self: flex-start;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  font-size: 14px;
-  line-height: 12px;
-
-}
-
-.user__number {
-  font-size: 18px;
-  font-weight: bolder;
-  line-height: 16px;
-}

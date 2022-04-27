@@ -1,7 +1,9 @@
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './AddCommentForm.css'
-import { user } from '../../constants/users'
 
 export function AddCommentForm() {
+  const user = useTypedSelector(state => state.user)
+
   return (
     <form className='add-coment-form'>
       <div className='add-coment-form__user-avatar-container'>

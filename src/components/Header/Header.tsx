@@ -1,7 +1,9 @@
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './Header.css'
-import { user } from '../../constants/users'
 
 export function Header() {
+  const user = useTypedSelector(state => state.user)
+
   return (
     <header className='header'>
       <div className='header__container'>

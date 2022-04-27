@@ -1,0 +1,20 @@
+.user-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+}
+
+.user-text-content__name {
+  font-weight: bolder;
+  margin: 0;
+}
+
+.user-text-content__biography {
+  margin: 0;
+}
+
+.user-text-content__website {
+  text-decoration: none;
+  color: rgb(0, 0, 134);
+}

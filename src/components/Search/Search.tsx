@@ -1,14 +1,16 @@
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './Search.css'
-import { user } from '../../constants/users'
-import { myList2 } from '../MyList/MyList'
 import { SearchItem } from './SearchItem'
 
 export function Search() {
 
+  const user = useTypedSelector(state => state.user)
+
+
   return (
     <section className='search'>
       <div className='search__gallery'>
-        {myList2.map((foto, index) => {
+        {user.publications.map((foto, index) => {
           return (
             <SearchItem foto={foto} key={index}/>
           )

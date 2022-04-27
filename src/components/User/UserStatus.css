@@ -1,0 +1,48 @@
+.user-status {
+  width: max-content;
+  padding: 5px 10px;
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  left: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.user-status::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+  left: -10px;
+  top: 0;
+}
+
+.user-status::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+  right: -10px;
+  top: 0;
+}
+
+.user-status__text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.user-status__image-container {
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../images/buttons/like.png);
+}

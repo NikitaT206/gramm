@@ -1,35 +1,33 @@
-import { user } from '../../constants/users'
 import { UserGallery } from './UserGallery'
 import './User.css'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { Avatar } from '../Avatar/Avatar'
+import { UserSocialBlock } from './UserSocialBlock'
+import { UserTextContent } from './UserTextContent'
+import { NavLink } from 'react-router-dom'
+import { EditProfile } from '../EditProfile/EditProfile'
+import { useEffect, useState } from 'react'
+import { useActions } from '../../hooks/useActions'
 
 export function User() {
+  const user = useTypedSelector(state => state.user)
+  const {showEditProfile} = useActions()
+  const editProfile = useTypedSelector(state => state.app.showEditProfile)
+
   return (
     <div className='user'>
+      {/* {editProfile ? <EditProfile/> : '' } */}
+      <EditProfile/>
+
       <div className='user__info'>
         <div className='user__avatar-and-content-block'>
-          <img className='user__avatar' src={user.avatar}></img>
-          <div className='user__content-info'>
-            <div className='user__content-block'>
-              <div className='user__number'>12</div>
-              <div className='user__block-name'>Публикации</div>
-            </div>
-            <div className='user__content-block'>
-              <div className='user__number'>54</div>
-              <div className='user__block-name'>Подписчики</div>
-            </div>
-            <div className='user__content-block'>
-              <div className='user__number'>204</div>
-              <div className='user__block-name'>Подписки</div>
-            </div>
-          </div>
+          <Avatar profile={true}/>
+          <UserSocialBlock/>
         </div>
-        <div className='user__text-content'>
-          <p className='user__name'>{user.firstName + ' ' + user.lastName}</p>
-          <p className='user__description'>{user.description}</p>
-        </div>
+        <UserTextContent/>
+        <button onClick={() => showEditProfile(true)}>Редактировать профиль</button>
       </div>
       <UserGallery/>
-
     </div>
   )
 }

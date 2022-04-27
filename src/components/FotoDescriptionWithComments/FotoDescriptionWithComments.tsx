@@ -1,19 +1,10 @@
 import { useEffect, useState } from 'react'
-import { api } from '../../constants/fotos'
 import { Comments } from './Comments'
 import './FotoDescriptionWithComments.css'
 
 export function FotoDescriptionWithComments(props: any) {
 
   const [comments, setComments] = useState([])
-
-  async function getComments() {
-    return await api.getComments().then(data => setComments(data.map((item: any) => item.body)))
-  }
-
-  useEffect(() => {
-    getComments()    
-  }, [])
 
   return (
     <section className='foto-description-with-comments'>

@@ -16,9 +16,11 @@ import { Search } from './components/Search/Search';
 import { Video } from './components/Video/Video';
 import { Liked } from './components/Liked/Liked';
 import { FotoDescriptionWithComments } from './components/FotoDescriptionWithComments/FotoDescriptionWithComments';
+import { EditProfile } from './components/EditProfile/EditProfile';
+import { useTypedSelector } from './hooks/useTypedSelector';
 
 function App() {
- 
+  
   return (
     <div className="app">
       <div className='container'>

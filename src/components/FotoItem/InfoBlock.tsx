@@ -2,21 +2,12 @@ import { AddCommentForm } from './AddCommentForm'
 import { FotoDescription } from './FotoDescription'
 import './InfoBlock.css'
 import { SocialIconsBlock } from './SocialIconsBlock'
-import { api } from '../../constants/fotos'
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
 export function InfoBlock() {
 
   const [comments, setComments] = useState([])
-
-  async function getComments() {
-    return await api.getComments().then(data => setComments(data.map((item: any) => item.body)))
-  }
-
-  useEffect(() => {
-    getComments()
-  }, [])
 
   return (
     <div className='info'>

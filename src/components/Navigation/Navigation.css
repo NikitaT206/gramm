@@ -68,18 +68,8 @@
   background-image: url(../../images/buttons/like.png);
 }
 
-.navigation__button_type_profile {
-  box-sizing: border-box;
-  border-radius: 50%;
-  outline: 1px solid grey;
-  background-image: url(../../images/me.jpg);
-  transition: none;
-}
-
 .navigation__button_type_profile_active {
-  transition: none;
-  box-sizing: border-box;
   border-radius: 50%;
-  outline: 1.5px solid rgb(36, 36, 36);
-  background-image: url(../../images/me.jpg);
+  box-sizing: border-box;
+  outline: 1px solid rgb(0, 0, 0);
 }

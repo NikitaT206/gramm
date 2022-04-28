@@ -14,7 +14,7 @@ export function FotoDescription(props: {publication: Publication}) {
     <div className='foto-description'>
       <p className='foto-description__text'>
 
-        <span>{props.publication.owner?.name}</span>
+        <span>{props.publication.owner?.name} </span>
 
         {props.publication.description.length > number && !showAllText ? (
           props.publication.description.slice(0, number)

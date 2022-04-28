@@ -30,6 +30,7 @@ export function AddPublication() {
 
   function onSubmitHandler() {
     addPublication(data)
+    showAddPublicationForm(false)
   }
 
   return (

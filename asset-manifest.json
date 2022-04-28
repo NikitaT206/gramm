@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gramm/static/css/main.21998fe0.css",
-    "main.js": "/gramm/static/js/main.d07cd274.js",
+    "main.js": "/gramm/static/js/main.e533ea54.js",
     "static/media/2.png": "/gramm/static/media/2.640360820e3ff20be745.png",
     "static/media/1.png": "/gramm/static/media/1.66642cbf5f66050145a3.png",
     "static/media/3.png": "/gramm/static/media/3.c6c6f16335eb0155f3d9.png",
@@ -13,10 +13,10 @@
     "static/media/plus.png": "/gramm/static/media/plus.f21a9921a345ef558fd8.png",
     "index.html": "/gramm/index.html",
     "main.21998fe0.css.map": "/gramm/static/css/main.21998fe0.css.map",
-    "main.d07cd274.js.map": "/gramm/static/js/main.d07cd274.js.map"
+    "main.e533ea54.js.map": "/gramm/static/js/main.e533ea54.js.map"
   },
   "entrypoints": [
     "static/css/main.21998fe0.css",
-    "static/js/main.d07cd274.js"
+    "static/js/main.e533ea54.js"
   ]
 }

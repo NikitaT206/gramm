@@ -1,0 +1,82 @@
+.popup {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 10;
+  background-color: white;
+}
+
+.popup__form {
+  width: 100%;
+  max-width: 93%;
+  margin: 0 auto;
+}
+
+.popup__heading {
+  box-sizing: border-box;
+  padding: 20px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+}
+
+.popup__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.popup__button {
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popup__button_type_cancel {
+  background-image: url(../../images/buttons/cancel.png);
+}
+
+.popup__button_type_check {
+  background-image: url(../../images/buttons/check.png);
+}
+
+.popup__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  z-index: 10;
+  min-height: calc(100vh - 95px);
+}
+
+.popup__label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: grey;
+}
+
+.popup__input {
+  box-sizing: border-box;
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  padding: 0 20px 7px 0;
+}

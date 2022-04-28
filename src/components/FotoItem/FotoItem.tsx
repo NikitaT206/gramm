@@ -10,7 +10,7 @@ export function FotoItem({item}: any) {
       <div className='foto-item__foto-container'>
         <img className='foto-item__image' src={item.image}/>
       </div>
-      <InfoBlock/>
+      <InfoBlock publication={item}/>
     </div>
   )
 }

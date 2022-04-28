@@ -1,5 +1,7 @@
+import { Publication } from './publication'
+
 export interface User {
-  publications: any[],
+  publications: Publication[],
   name: string,
   avatar: string,
   biography: string,
@@ -10,6 +12,7 @@ export interface User {
   status: string,
   email: string,
   website: string,
+  id: number
 }
 
 export enum UserActionTypes {
@@ -25,8 +28,7 @@ interface UserAddPublicationAction {
 
 interface UserChangeProfileAction {
   type: UserActionTypes.CHANGE_PROFILE,
-  payload: any
-  // {name: string, avatar: string, biography: string, login: string, website: string}
+  payload: {name: string, avatar: string, biography: string, login: string, website: string}
 }
 
 interface UserChangeEmailAction {

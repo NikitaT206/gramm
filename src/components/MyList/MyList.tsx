@@ -11,7 +11,7 @@ export function MyList() {
       <div className='my-list__container'>
         {user.publications.map((item, index) => {
           return (
-            <FotoItem item={item} key={index}/>
+            <FotoItem item={item} key={item.id}/>
           )
         })}
       </div>

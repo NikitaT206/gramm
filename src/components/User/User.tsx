@@ -14,7 +14,6 @@ export function User() {
 
   return (
     <div className='user'>
-      <EditProfile/>
 
       <div className='user__info'>
         <div className='user__avatar-and-content-block'>

@@ -1,3 +1,4 @@
+import { useTypedSelector } from '../hooks/useTypedSelector'
 import foto1 from '../images/fotos/1.png'
 import foto2 from '../images/fotos/2.png'
 import foto3 from '../images/fotos/3.png'
@@ -5,21 +6,18 @@ import foto4 from '../images/fotos/4.png'
 import foto5 from '../images/fotos/5.png'
 import foto6 from '../images/fotos/6.png'
 import foto7 from '../images/fotos/7.png'
+import { Publication } from '../types/publication'
 
-export const fotoObj1: any = {
-  image: foto1,
-  likes: [...new Array(Math.floor(Math.random() * 100))],
-  description: 'description',
-  date: new Date(),
-  comments: []
-}
+// const user = useTypedSelector(state => state.user)
 
-export const fotoObj2: any = {
+export const fotoObj2: Publication = {
   image: foto2,
   likes: [],
   description: 'description',
   date: new Date(),
-  comments: []
+  comments: [],
+  id: Math.random(),
+  owner: null
 }
 
 export const fotoObj3: any = {
@@ -27,7 +25,9 @@ export const fotoObj3: any = {
   likes: [],
   description: 'description',
   date: new Date(),
-  comments: []
+  comments: [],
+  id: Math.random(),
+  owner: null
 }
 
 export const fotoObj4: any = {
@@ -35,7 +35,9 @@ export const fotoObj4: any = {
   likes: [],
   description: 'description',
   date: new Date(),
-  comments: []
+  comments: [],
+  id: Math.random(),
+  owner: null
 }
 
 export const fotoObj5: any = {
@@ -43,24 +45,26 @@ export const fotoObj5: any = {
   likes: [],
   description: 'description',
   date: new Date(),
-  comments: []
+  comments: [],
+  id: Math.random(),
+  owner: null
 }
 
-export const fotoObj6: any = {
-  image: foto6,
-  likes: [],
-  description: 'description',
-  date: new Date(),
-  comments: []
-}
+// export const fotoObj6: any = {
+//   image: foto6,
+//   likes: [],
+//   description: 'description',
+//   date: new Date(),
+//   comments: []
+// }
 
-export const fotoObj7: any = {
-  image: foto7,
-  likes: [],
-  description: 'description',
-  date: new Date(),
-  comments: []
-}
+// export const fotoObj7: any = {
+//   image: foto7,
+//   likes: [],
+//   description: 'description',
+//   date: new Date(),
+//   comments: []
+// }
 
 // export const fotoObj8: any = {
 //   image: foto8,

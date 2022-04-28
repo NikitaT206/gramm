@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { SearchInput } from '../Search/SearchInput'
 import './Header.css'
@@ -7,6 +7,7 @@ import './Header.css'
 export function Header() {
   const user = useTypedSelector(state => state.user)
   const location = useLocation()
+  const {showAddPublicationForm} = useActions()
 
   if (location.pathname === '/search') {
     return (
@@ -27,7 +28,7 @@ export function Header() {
           <div className='header__arrow-image'></div>
         </div>
         <div className='header__buttons-container'>
-          <button className='header__button header__button_type_add-foto'></button>
+          <button className='header__button header__button_type_add-foto' type={'button'} onClick={() => showAddPublicationForm(true)}></button>
           <button className='header__button header__button_type_open-messages'></button>
         </div>
       </div>

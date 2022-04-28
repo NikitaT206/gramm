@@ -1,10 +1,7 @@
-import avatar from '../../images/me.jpeg'
-import { fotoObj1, fotoObj2, fotoObj3, fotoObj4, fotoObj5, fotoObj6, fotoObj7 } from '../../constants/fotos'
-
 import { User, UserActions, UserActionTypes } from '../../types/user'
 
 const defaultUserState: User = {
-  publications: [fotoObj1, fotoObj2, fotoObj3, fotoObj4, fotoObj5, fotoObj6, fotoObj7],
+  publications: [],
   name: 'Nikita',
   avatar: require('../../images/me.jpeg'),
   biography: 'Developer',
@@ -14,7 +11,8 @@ const defaultUserState: User = {
   messages: [],
   status: 'Working',
   email: 'acid3602@mail.ru',
-  website: 'github.com'
+  website: 'github.com',
+  id: 1
 }
 
 export const userReducer = (state = defaultUserState, action: UserActions): User => {

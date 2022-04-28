@@ -1,13 +1,9 @@
 {
   "files": {
-    "main.css": "/gramm/static/css/main.aa2395a3.css",
-    "main.js": "/gramm/static/js/main.ec2995c4.js",
-    "static/media/4.png": "/gramm/static/media/4.c676247f3dd25bf0010a.png",
+    "main.css": "/gramm/static/css/main.21998fe0.css",
+    "main.js": "/gramm/static/js/main.f2866717.js",
     "static/media/2.png": "/gramm/static/media/2.640360820e3ff20be745.png",
-    "static/media/6.png": "/gramm/static/media/6.f092c051e27917b8b365.png",
     "static/media/1.png": "/gramm/static/media/1.66642cbf5f66050145a3.png",
-    "static/media/7.png": "/gramm/static/media/7.deebd68e11d9ad742b39.png",
-    "static/media/5.png": "/gramm/static/media/5.6aad049bb460f5f1dd19.png",
     "static/media/3.png": "/gramm/static/media/3.c6c6f16335eb0155f3d9.png",
     "static/media/video.png": "/gramm/static/media/video.52535072f84ae498ac6f.png",
     "static/media/me.jpeg": "/gramm/static/media/me.08e0433d14bba4242978.jpeg",
@@ -16,11 +12,11 @@
     "static/media/like.png": "/gramm/static/media/like.49a33fdaac365c00bfa5.png",
     "static/media/plus.png": "/gramm/static/media/plus.f21a9921a345ef558fd8.png",
     "index.html": "/gramm/index.html",
-    "main.aa2395a3.css.map": "/gramm/static/css/main.aa2395a3.css.map",
-    "main.ec2995c4.js.map": "/gramm/static/js/main.ec2995c4.js.map"
+    "main.21998fe0.css.map": "/gramm/static/css/main.21998fe0.css.map",
+    "main.f2866717.js.map": "/gramm/static/js/main.f2866717.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa2395a3.css",
-    "static/js/main.ec2995c4.js"
+    "static/css/main.21998fe0.css",
+    "static/js/main.f2866717.js"
   ]
 }

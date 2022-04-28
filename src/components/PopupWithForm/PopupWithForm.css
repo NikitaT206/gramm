@@ -1,12 +1,14 @@
 .popup {
   width: 100%;
   min-height: 100vh;
-  position: absolute;
+  max-height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   z-index: 10;
   background-color: white;
+  overflow: hidden;
 }
 
 .popup__form {

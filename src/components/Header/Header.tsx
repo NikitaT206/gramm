@@ -18,6 +18,22 @@ export function Header() {
     </header>
     )
   }
+
+  if (location.pathname === '/') {
+    return (
+      <header className='header'>
+      <div className='header__container'>
+        <div className='header__logo-container'>
+          <img className='header__logo' src={require('../../images/logo/gramm.jpg')}/>
+        </div>
+        <div className='header__buttons-container'>
+          <button className='header__button header__button_type_add-foto' type={'button'} onClick={() => showAddPublicationForm(true)}></button>
+          <button className='header__button header__button_type_open-messages'></button>
+        </div>
+      </div>
+    </header>
+    )
+  }
   
   return (
     <header className='header'>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Header } from './components/Header/Header';
 import { MyList } from './components/MyList/MyList';
@@ -22,57 +22,30 @@ import { useActions } from './hooks/useActions';
 import { Publication } from './types/publication';
 import { PopupWithForm } from './components/PopupWithForm/PopupWithForm';
 import { AddPublication } from './components/AddPublication/AddPublication';
+import { api } from './api/user';
+import { Registration } from './components/Login/Registration';
+import {Login} from './components/Login/Login'
 
 
 function App() {
 
-  const {addPublication} = useActions()
+  const {addPublication, editProfile} = useActions()
   const user = useTypedSelector(state => state.user)
 
-  const fotoObj1: Publication = {
-    image: require('./images/fotos/1.png'),
-    likes: [],
-    description: 'Foto 1',
-    date: new Date,
-    comments: [],
-    owner: user,
-    id: 1
-  }
+  // useEffect(() => {
+  //   arr.forEach(item => addPublication(item))
+  // }, [])
 
-  const fotoObj2: Publication = {
-    image: require('./images/fotos/2.png'),
-    likes: [],
-    description: 'Foto 2',
-    date: new Date,
-    comments: [],
-    owner: user,
-    id: 2
-  }
-
-  const fotoObj3: Publication = {
-    image: require('./images/fotos/3.png'),
-    likes: [],
-    description: 'Foto 3',
-    date: new Date,
-    comments: [],
-    owner: user,
-    id: 3
-  }
-
-  const arr = [fotoObj1, fotoObj2, fotoObj3]
-
-  useEffect(() => {
-    arr.forEach(item => addPublication(item))
-  }, [])
-
-  const editProfile = useTypedSelector(state => state.app.showEditProfile)
-  const addPublicationForm = useTypedSelector(state => state.app.showAddPublicationForm)
+  // const editProfile = useTypedSelector(state => state.app.showEditProfile)
+  // const addPublicationForm = useTypedSelector(state => state.app.showAddPublicationForm)
 
   
   return (
     <div className="app">
       <div className='container'>
-        <Header/>
+        {/* <Registration/> */}
+        <Login/>
+        {/* <Header/>
         <Routes>
           <Route path='/' element={<MyList/>}/>
           <Route path='/profile' element={<User/>}/>
@@ -81,9 +54,9 @@ function App() {
           <Route path='/liked' element={<Liked/>}/>
           <Route path='/comments' element={<FotoDescriptionWithComments/>}/>
         </Routes>
-        <Navigation/>
-        {editProfile ? <EditProfile/> : ''}
-        {addPublicationForm ? <AddPublication/> : ''}
+        <Navigation/> */}
+        {/* {editProfile ? <EditProfile/> : ''}
+        {addPublicationForm ? <AddPublication/> : ''} */}
       </div>
     </div>
   );

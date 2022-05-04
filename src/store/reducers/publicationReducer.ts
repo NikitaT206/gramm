@@ -1,12 +1,10 @@
-import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { User } from '../../types/user'
 import {Publication, PublicationActions, PublicationActionTypes} from '../../types/publication'
 
 const defaultPublicationState: Publication = {
   image: '',
   likes: [],
   description: '',
-  date: new Date,
+  date: new Date(),
   comments: [],
   owner: null,
   id: null

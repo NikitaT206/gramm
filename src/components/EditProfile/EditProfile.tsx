@@ -8,7 +8,7 @@ import { PopupWithForm } from '../PopupWithForm/PopupWithForm'
 export function EditProfile() {
   const user = useTypedSelector(state => state.user)
   const {showEditProfile} = useActions()
-  const {changeProfile} = useActions()
+  const {editProfile} = useActions()
 
   const [data, setData] = useState({name: user.name, login: user.login, website: user.website, biography: user.biography, avatar: user.avatar})
   
@@ -31,7 +31,7 @@ export function EditProfile() {
   }
 
   function submitHandler() {
-    changeProfile(data)
+    editProfile(data)
     showEditProfile(false)
   }
 

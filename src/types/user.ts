@@ -19,6 +19,10 @@ export enum UserActionTypes {
   ADD_PUBLICATION = 'ADD_PUBLICATION',
   CHANGE_PROFILE = 'CHANGE_PROFILE',
   CHANGE_EMAIL = 'CHANGE_EMAIL',
+  SET_LIKE = 'SET_LIKE',
+  DELETE_LIKE = 'DELETE_LIKE',
+  SET_COMMENT = 'SET_COMMENT',
+  DELETE_COMMENT = 'DELETE_COMMENT'
 }
 
 interface UserAddPublicationAction {
@@ -36,4 +40,22 @@ interface UserChangeEmailAction {
   payload: string
 }
 
-export type UserActions = UserAddPublicationAction | UserChangeProfileAction | UserChangeEmailAction
+interface UserSetLikeAction {
+  type: UserActionTypes.SET_LIKE
+}
+
+interface UserDeleteLikeAction {
+  type: UserActionTypes.DELETE_LIKE
+}
+
+interface UserSetCommentAction {
+  type: UserActionTypes.SET_COMMENT,
+  payload: string
+}
+
+interface UserDeleteCommentAction {
+  type: UserActionTypes.DELETE_COMMENT,
+  payload: string
+}
+
+export type UserActions = UserAddPublicationAction | UserChangeProfileAction | UserChangeEmailAction | UserSetLikeAction | UserDeleteLikeAction | UserSetCommentAction | UserDeleteCommentAction

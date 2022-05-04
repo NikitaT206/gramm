@@ -2,21 +2,23 @@ import { User, UserActions, UserActionTypes } from '../../types/user'
 
 const defaultUserState: User = {
   publications: [],
-  name: 'Nikita',
-  avatar: require('../../images/me.jpeg'),
-  biography: 'Developer',
-  login: 'acid3602',
+  name: '',
+  avatar: '',
+  biography: '',
+  login: '',
   subscribers: [],
   subscriptions: [],
   messages: [],
-  status: 'Working',
-  email: 'acid3602@mail.ru',
-  website: 'github.com',
+  status: '',
+  email: '',
+  website: '',
   id: 1
 }
 
 export const userReducer = (state = defaultUserState, action: UserActions): User => {
   switch(action.type) {
+    // case UserActionTypes.SET_LIKE:
+    //   return {...state, publications: [action.payload, ...state.publications]}
     case UserActionTypes.ADD_PUBLICATION:
       return {...state, publications: [action.payload, ...state.publications]}
     case UserActionTypes.CHANGE_EMAIL:

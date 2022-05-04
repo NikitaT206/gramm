@@ -1,21 +1,33 @@
 import { useState } from 'react'
+import { useActions } from '../../hooks/useActions'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import './SocialIconsBlock.css'
 
 export function SocialIconsBlock() {
-  const [like, setLike] = useState(false)
-  function likeSet() {
-    setLike(!like)
+  // const [like, setLike] = useState(false)
+  // function likeSet() {
+  //   setLike(!like)
+  // }
+
+  const user = useTypedSelector(state => state.user)
+
+  const {setLike} = useActions()
+
+  function log() {
+    setLike(user)
+    console.log(user);
   }
+
   return (
     <div className='social-icons'>
       
       <div className='social-icons__likes-coment-share-buttons'>
         <button 
           className=
-            {!like 
-              ? 'social-icons__button social-icons__button_type_like' 
-              : 'social-icons__button social-icons__button_type_like social-icons__button_type_like_active'}
-              onClick={likeSet}
+            // {!like 
+              'social-icons__button social-icons__button_type_like' 
+              // 'social-icons__button social-icons__button_type_like social-icons__button_type_like_active'
+              onClick={log}
               ></button>
         <button className='social-icons__button social-icons__button_type_comment'></button>
         <button className='social-icons__button social-icons__button_type_share'></button>

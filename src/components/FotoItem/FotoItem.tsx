@@ -8,7 +8,7 @@ export function FotoItem({item}: any) {
     <div className='foto-item'>
       <HeadingBlock/>
       <div className='foto-item__foto-container'>
-        <img className='foto-item__image' src={item.image}/>
+        <img className='foto-item__image' src={item.image} alt='avatar'/>
       </div>
       <InfoBlock publication={item}/>
     </div>

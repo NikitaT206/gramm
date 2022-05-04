@@ -1,8 +1,15 @@
 import { Dispatch } from 'redux'
-import { AppActionTypes, AppActions } from '../../types/app'
+import { PublicationActions, PublicationActionTypes } from '../../types/publication'
+import { User } from '../../types/user'
 
-export function showEditProfile(state: boolean) {
-  return (dispatch: Dispatch<AppActions>) => {
-    dispatch({type: AppActionTypes.SHOW_EDIT_PROFILE, payload: state})
+export function setLike(state: User) {
+  return (dispatch: Dispatch<PublicationActions>) => {
+    dispatch({type: PublicationActionTypes.SET_LIKE, payload: state})
+  }
+}
+
+export function deleteLike(state: User) {
+  return (dispatch: Dispatch<PublicationActions>) => {
+    dispatch({type: PublicationActionTypes.DELETE_LIKE, payload: state})
   }
 }

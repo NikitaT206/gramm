@@ -1,4 +1,6 @@
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { Header } from '../Header/Header'
+import { Navigation } from '../Navigation/Navigation'
 import './Search.css'
 import { SearchItem } from './SearchItem'
 
@@ -9,6 +11,7 @@ export function Search() {
 
   return (
     <section className='search'>
+      <Header/>
       <div className='search__gallery'>
         {user.publications.map((foto, index) => {
           return (
@@ -16,6 +19,7 @@ export function Search() {
           )
         })}
       </div>
+      <Navigation/>
     </section>
   )
 }

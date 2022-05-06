@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { api } from '../../api/user'
+import { useActions } from '../../hooks/useActions'
 import './Login.css'
 
 export function Login() {
   const [data, setData] = useState({name: '', login: '', email: '', password: ''})
+  const {setLoggedIn} = useActions()
+  const navigate = useNavigate()
   
   function onChangeHandler(event: any) {
     const {name, value} = event.target
@@ -15,7 +19,14 @@ export function Login() {
 
   function submitHandler(event: any) {
     event.preventDefault()
-    api.signin(data).then(data => console.log(data))
+    api.signin(data).then(data => {
+      if (data) {
+        setLoggedIn(true)
+        setTimeout(() => {
+          navigate('/profile')
+        }, 1000)
+      }
+    }).catch(err => console.log(err))
   }
 
   return (
@@ -35,6 +46,8 @@ export function Login() {
         <button type='submit'>Войти</button>
 
       </form>
+
+      <Link to={'/signup'}>Регистрация</Link>
     </section>
   )
 }

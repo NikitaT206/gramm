@@ -6,6 +6,8 @@ import { UserSocialBlock } from './UserSocialBlock'
 import { UserTextContent } from './UserTextContent'
 import { EditProfile } from '../EditProfile/EditProfile'
 import { useActions } from '../../hooks/useActions'
+import { Header } from '../Header/Header'
+import { Navigation } from '../Navigation/Navigation'
 
 export function User() {
   const user = useTypedSelector(state => state.user)
@@ -14,7 +16,7 @@ export function User() {
 
   return (
     <div className='user'>
-
+      <Header/>
       <div className='user__info'>
         <div className='user__avatar-and-content-block'>
           <Avatar profile={true}/>
@@ -24,6 +26,7 @@ export function User() {
         <button onClick={() => showEditProfile(true)}>Редактировать профиль</button>
       </div>
       <UserGallery/>
+      <Navigation/>
     </div>
   )
 }

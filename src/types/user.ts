@@ -12,7 +12,8 @@ export interface User {
   status: string,
   email: string,
   website: string,
-  id: number
+  loggedIn: boolean,
+  _id: any
 }
 
 export enum UserActionTypes {
@@ -22,7 +23,19 @@ export enum UserActionTypes {
   SET_LIKE = 'SET_LIKE',
   DELETE_LIKE = 'DELETE_LIKE',
   SET_COMMENT = 'SET_COMMENT',
-  DELETE_COMMENT = 'DELETE_COMMENT'
+  DELETE_COMMENT = 'DELETE_COMMENT',
+  SET_LOGGED_IN = 'SET_LOGGED_IN',
+  SET_USER_INFO = 'SET_USER_INFO'
+}
+
+interface UserSetUserInfoAction {
+  type: UserActionTypes.SET_USER_INFO,
+  payload: User
+}
+
+interface UserSetLoggedInAction {
+  type: UserActionTypes.SET_LOGGED_IN,
+  payload: boolean
 }
 
 interface UserAddPublicationAction {
@@ -58,4 +71,4 @@ interface UserDeleteCommentAction {
   payload: string
 }
 
-export type UserActions = UserAddPublicationAction | UserChangeProfileAction | UserChangeEmailAction | UserSetLikeAction | UserDeleteLikeAction | UserSetCommentAction | UserDeleteCommentAction
+export type UserActions = UserAddPublicationAction | UserChangeProfileAction | UserChangeEmailAction | UserSetLikeAction | UserDeleteLikeAction | UserSetCommentAction | UserDeleteCommentAction | UserSetLoggedInAction | UserSetUserInfoAction

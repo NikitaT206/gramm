@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { api } from '../../api/user'
 import './Login.css'
 
@@ -45,6 +46,7 @@ export function Registration() {
 
       </form>
 
+      <Link to={'/signin'}>Войти</Link>
 
     </section>
   )

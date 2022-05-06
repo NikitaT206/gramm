@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import { Header } from './components/Header/Header';
 import { MyList } from './components/MyList/MyList';
-import { Navigation } from './components/Navigation/Navigation';
 import { User } from './components/User/User';
 import {
   Routes,
-  Router,
   Route,
-  Link,
   useNavigate,
-  Navigator
+  Navigate
 } from "react-router-dom";
 import { Search } from './components/Search/Search';
 import { Video } from './components/Video/Video';
 import { Liked } from './components/Liked/Liked';
-import { FotoDescriptionWithComments } from './components/FotoDescriptionWithComments/FotoDescriptionWithComments';
-import { EditProfile } from './components/EditProfile/EditProfile';
 import { useTypedSelector } from './hooks/useTypedSelector';
 import { useActions } from './hooks/useActions';
-import { Publication } from './types/publication';
-import { PopupWithForm } from './components/PopupWithForm/PopupWithForm';
-import { AddPublication } from './components/AddPublication/AddPublication';
 import { api } from './api/user';
 import { Registration } from './components/Login/Registration';
 import {Login} from './components/Login/Login'
@@ -29,37 +20,48 @@ import {Login} from './components/Login/Login'
 
 function App() {
 
-  const {addPublication, editProfile} = useActions()
-  const user = useTypedSelector(state => state.user)
+  const { setUserInfo, setLoggedIn} = useActions()
+  const loggedIn = useTypedSelector(state => state.user.loggedIn)
 
-  // useEffect(() => {
-  //   arr.forEach(item => addPublication(item))
-  // }, [])
+  useEffect(() => {
+    api.getUserInfo().then(data => {
+      if (data) {
+        setLoggedIn(true)
+      }
+    }).catch(err => {
+      setLoggedIn(false)
+      console.log(err)
+    })
+  }, [])
 
-  // const editProfile = useTypedSelector(state => state.app.showEditProfile)
-  // const addPublicationForm = useTypedSelector(state => state.app.showAddPublicationForm)
+  useEffect(() => {
+    if (loggedIn) {
+      api.getUserInfo().then(data => {
+        setUserInfo(data)
+      })
+    }
+  }, [loggedIn])
 
-  
   return (
     <div className="app">
       <div className='container'>
-        {/* <Registration/> */}
-        <Login/>
-        {/* <Header/>
-        <Routes>
-          <Route path='/' element={<MyList/>}/>
-          <Route path='/profile' element={<User/>}/>
-          <Route path='/search' element={<Search/>}/>
-          <Route path='/video' element={<Video/>}/>
-          <Route path='/liked' element={<Liked/>}/>
-          <Route path='/comments' element={<FotoDescriptionWithComments/>}/>
-        </Routes>
-        <Navigation/> */}
-        {/* {editProfile ? <EditProfile/> : ''}
-        {addPublicationForm ? <AddPublication/> : ''} */}
+        
+      <Routes>
+
+        <Route path='/signin' element={!loggedIn ? <Login/> : <Navigate to='/'/>}/>
+        <Route path='/signup' element={!loggedIn ? <Registration/> : <Navigate to='/'/>}/>
+
+        <Route path='/' element={loggedIn ? <MyList/> : <Navigate to='/signin'/>}/>
+        <Route path='/profile' element={loggedIn ? <User/> : <Navigate to='/signin'/>}/>
+        <Route path='/search' element={loggedIn ? <Search/> : <Navigate to='/signin'/>}/>
+        <Route path='/video' element={loggedIn ? <Video/> : <Navigate to='/signin'/>}/>
+        <Route path='/liked' element={loggedIn ? <Liked/> : <Navigate to='/signin'/>}/>
+       
+      </Routes>
+
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

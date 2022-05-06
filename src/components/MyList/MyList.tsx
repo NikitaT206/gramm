@@ -1,6 +1,8 @@
 import './MyList.css'
 import { FotoItem } from '../FotoItem/FotoItem'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { Header } from '../Header/Header'
+import { Navigation } from '../Navigation/Navigation'
 
 export function MyList() {
 
@@ -8,6 +10,7 @@ export function MyList() {
 
   return (
     <div className='my-list'>
+      <Header/>
       <div className='my-list__container'>
         {user.publications.map((item, index) => {
           return (
@@ -15,6 +18,7 @@ export function MyList() {
           )
         })}
       </div>
+      <Navigation/>
     </div>
   )
 }

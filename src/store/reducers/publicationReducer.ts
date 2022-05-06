@@ -14,8 +14,8 @@ export const publicationReducer = (state = defaultPublicationState, action: Publ
   switch(action.type) {
     case PublicationActionTypes.SET_LIKE:
       return {...state, likes: [...state.likes, action.payload]}
-    case PublicationActionTypes.DELETE_LIKE:
-      return {...state, likes: state.likes.filter(user => user.id !== action.payload.id)}
+    // case PublicationActionTypes.DELETE_LIKE:
+    //   return {...state, likes: state.likes.filter(user => user.id !== action.payload.id)}
     case PublicationActionTypes.SET_COMMENT:
       return {...state, comments: [...state.comments, action.payload]}
     // case PublicationActionTypes.DELETE_COMMENT:
